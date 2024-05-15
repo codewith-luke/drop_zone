@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://uhd2vgn3v1in"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_vedtq"]
+[ext_resource type="PackedScene" uid="uid://dj1l2m83sha4n" path="res://HUD/HUD.tscn" id="1_vu2lm"]
+[ext_resource type="PackedScene" uid="uid://dj21hrfcwebmf" path="res://game_area/game_area.tscn" id="2_4q0me"]
+[ext_resource type="PackedScene" uid="uid://bmhetn6pol8lm" path="res://socket/socket_client.tscn" id="4_ki82n"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_vedtq")
+
+[node name="GameArea" parent="." instance=ExtResource("2_4q0me")]
+
+[node name="HUD" parent="." instance=ExtResource("1_vu2lm")]
+
+[node name="SocketClient" parent="." instance=ExtResource("4_ki82n")]
