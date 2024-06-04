@@ -1,11 +1,10 @@
 extends Node
 
+signal on_player_heatmap_click
+
 @onready var GAME_AREA_NODE = $"../GameArea"
-@onready var HUD_NODE = $"../HUD"
 @onready var SOCKET_CLIENT_NODE = $"../SocketClient"
 
-var players = 0
-var player_lobby = {} 
 var player_add_control
 var game_width
 var game_height
@@ -23,7 +22,6 @@ func _process(_delta):
 func _create():
 	_set_game_dimensions()
 	_set_button_dimensions()
-	GAME_AREA_NODE.on_add_player.connect(_on_player_add)
 	SOCKET_CLIENT_NODE.on_socket_interaction.connect(_on_socket_interaction)	
 	
 func _set_game_dimensions():
@@ -41,14 +39,11 @@ func _set_button_dimensions():
 		button_width = player_add_control_dimensions[0]
 		button_height = player_add_control_dimensions[1]
 
-func _on_player_add():
-	players += 1
-	HUD_NODE.update_player_count(players);
-
 func _on_socket_interaction(data):
-	player_lobby[data.id] = data.id;	
-	_validate_click_location(data)
-	player_add_control.get_node("AddPlayerButton").emit_signal("pressed")
+	#player_lobby[data.id] = data.id;	
+	var results = _validate_click_location(data)
+	var vec = Vector2(results.x, results.y)
+	on_player_heatmap_click.emit(vec)
 
 func _validate_click_location(data):
 	_set_button_dimensions()
@@ -58,12 +53,15 @@ func _validate_click_location(data):
 		"x": player_x,
 		"y": player_y
 	}
-
-	print(button_width, button_height)
-	print(player_x <= button_width)
-	print(player_y <= button_height)
-	print(player_x >= 0)
-	print(player_y >= 0)
+	print("======")
+	print(game_width)
+	print(data.x)
+	print(player_x)
+	#print(button_width, button_height)
+	#print(player_x <= button_width)
+	#print(player_y <= button_height)
+	#print(player_x >= 0)
+	#print(player_y >= 0)
 	
 	return results
 

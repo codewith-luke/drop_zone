@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj21hrfcwebmf"]
+[gd_scene load_steps=3 format=3 uid="uid://dj21hrfcwebmf"]
 
 [ext_resource type="Script" path="res://game_area/game_area.gd" id="1_k4srd"]
+[ext_resource type="PackedScene" uid="uid://b5rchwf4q8bgn" path="res://player_ball/player_ball.tscn" id="2_hy1kr"]
 
 [node name="GameArea" type="Control"]
 layout_mode = 3
@@ -27,5 +28,8 @@ offset_right = 1918.0
 offset_bottom = 84.0
 text = "Test"
 metadata/_edit_group_ = true
+
+[node name="PlayerBallRoot" parent="." instance=ExtResource("2_hy1kr")]
+position = Vector2(144, 16)
 
 [connection signal="pressed" from="PanelContainer/Control/AddPlayerButton" to="." method="_on_add_player_pressed"]

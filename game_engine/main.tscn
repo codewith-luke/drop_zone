@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://uhd2vgn3v1in"]
+[gd_scene load_steps=7 format=3 uid="uid://uhd2vgn3v1in"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_vedtq"]
 [ext_resource type="PackedScene" uid="uid://dj1l2m83sha4n" path="res://HUD/HUD.tscn" id="1_vu2lm"]
 [ext_resource type="PackedScene" uid="uid://dj21hrfcwebmf" path="res://game_area/game_area.tscn" id="2_4q0me"]
+[ext_resource type="PackedScene" uid="uid://b5rchwf4q8bgn" path="res://player_ball/player_ball.tscn" id="2_16d5y"]
 [ext_resource type="PackedScene" uid="uid://bmhetn6pol8lm" path="res://socket/socket_client.tscn" id="4_ki82n"]
 [ext_resource type="Script" path="res://heatmap_interaction_handler.gd" id="5_vxqva"]
 
@@ -10,6 +11,7 @@
 script = ExtResource("1_vedtq")
 
 [node name="GameArea" parent="." instance=ExtResource("2_4q0me")]
+player_ball = ExtResource("2_16d5y")
 
 [node name="HUD" parent="." instance=ExtResource("1_vu2lm")]
 
