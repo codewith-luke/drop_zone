@@ -7,7 +7,7 @@ func _ready():
 	print("loaded game area")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _on_add_player_pressed():

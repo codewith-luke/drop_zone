@@ -9,7 +9,7 @@ var socket = WebSocketPeer.new()
 func _ready():
 	socket.connect_to_url(websocket_url)
 
-func _process(delta):
+func _process(_delta):
 	socket.poll()
 	var state = socket.get_ready_state()
 	if state == WebSocketPeer.STATE_OPEN:
