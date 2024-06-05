@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://ds2w70f7u0ouo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cm2df"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4vkh6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lvxyg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wk4ig"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nc5jl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bsywd"]
+
+[node name="PanelContainer" type="PanelContainer"]
+offset_top = 4.0
+offset_right = 1920.0
+offset_bottom = 89.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cm2df")
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="AddPlayerButton" type="Button" parent="Control"]
+layout_mode = 2
+offset_right = 1918.0
+offset_bottom = 84.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4vkh6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lvxyg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wk4ig")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_nc5jl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bsywd")
+metadata/_edit_lock_ = true

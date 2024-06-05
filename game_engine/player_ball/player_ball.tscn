@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5rchwf4q8bgn"]
+[gd_scene load_steps=5 format=3 uid="uid://b5rchwf4q8bgn"]
 
 [ext_resource type="Texture2D" uid="uid://c1wft7hu5ol46" path="res://textures/ball.png" id="1_p46vb"]
+[ext_resource type="Script" path="res://player_ball/player_ball.gd" id="1_s32fq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gwers"]
 animations = [{
@@ -17,15 +18,17 @@ animations = [{
 radius = 32.0
 height = 64.0
 
-[node name="PlayerBallRoot" type="Area2D"]
+[node name="PlayerBallRoot" type="RigidBody2D"]
+script = ExtResource("1_s32fq")
+metadata/_edit_lock_ = true
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(31.5, 31.5)
 scale = Vector2(0.101562, 0.101562)
 sprite_frames = SubResource("SpriteFrames_gwers")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(31.5, 31.5)
 shape = SubResource("CapsuleShape2D_p43rq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
