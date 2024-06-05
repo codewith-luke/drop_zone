@@ -1,7 +1,5 @@
 extends Node
 
-signal on_add_player
-
 @export var player_ball: PackedScene
 
 @onready var HEATMAP_NODE = $"../HeatmapInteractionHandler"
@@ -24,13 +22,15 @@ func _on_add_player_pressed():
 	_on_player_add(mouse_position)
 	
 func _on_player_add(position):
-	print("button clicked")
-	var playerBall = player_ball.instantiate()
-	playerBall.position = position
-	print(position)
-	add_child(playerBall)
-	on_add_player.emit()
+	var player_ball = player_ball.instantiate()
+	var collision_entity = player_ball.get_node("RigidBody2D/CollisionShape2D")
+	var ball_size = collision_entity.get_shape().get_rect().size
+	position.y = position.y - ball_size.x;
+	position.x = position.x - (ball_size.y / 2);
+	player_ball.position = position
+	print("size: ", player_ball.position)
 	players += 1
+	add_child(player_ball)
 	HUD_NODE.update_player_count(players);
 	
 	

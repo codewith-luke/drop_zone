@@ -54,9 +54,9 @@ func _validate_click_location(data):
 		"y": player_y
 	}
 	print("======")
-	print(game_width)
-	print(data.x)
-	print(player_x)
+	#print(game_height)
+	#print(data.y)
+	#print(player_y)
 	#print(button_width, button_height)
 	#print(player_x <= button_width)
 	#print(player_y <= button_height)
