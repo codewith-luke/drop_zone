@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj21hrfcwebmf"]
+[gd_scene load_steps=6 format=3 uid="uid://dj21hrfcwebmf"]
 
 [ext_resource type="Script" path="res://game_area/game_area.gd" id="1_k4srd"]
 [ext_resource type="PackedScene" uid="uid://b5rchwf4q8bgn" path="res://player_ball/player_ball.tscn" id="2_hy1kr"]
 [ext_resource type="PackedScene" uid="uid://ds2w70f7u0ouo" path="res://game_area/game_button.tscn" id="2_vothp"]
 [ext_resource type="Texture2D" uid="uid://cycawy2mmsy0" path="res://textures/background/Blue.png" id="3_57ayd"]
+[ext_resource type="PackedScene" uid="uid://dx3xdaysg0wml" path="res://levels/level_1.tscn" id="6_l27gt"]
 
 [node name="GameArea" type="Control"]
 layout_mode = 3
@@ -32,3 +33,5 @@ offset_bottom = 85.0
 
 [node name="PlayerBallRoot" parent="." instance=ExtResource("2_hy1kr")]
 position = Vector2(144, 16)
+
+[node name="Level1" parent="." instance=ExtResource("6_l27gt")]

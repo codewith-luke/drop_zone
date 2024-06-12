@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx3xdaysg0wml"]
+
+[ext_resource type="PackedScene" uid="uid://j8hsub767gn6" path="res://levels/base_ledge.tscn" id="1_h1oql"]
+
+[node name="Level1" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="BaseLedge4" parent="." instance=ExtResource("1_h1oql")]
+offset_left = 1359.0
+offset_top = 282.0
+offset_right = 1359.0
+offset_bottom = 282.0
+rotation = -0.811334
+metadata/_edit_use_anchors_ = true
+
+[node name="BaseLedge" parent="." instance=ExtResource("1_h1oql")]
+offset_left = 293.0
+offset_top = 293.0
+offset_right = 293.0
+offset_bottom = 293.0
+rotation = 0.523598
+metadata/_edit_use_anchors_ = true
+
+[node name="BaseLedge2" parent="." instance=ExtResource("1_h1oql")]
+offset_left = 736.0
+offset_top = 451.0
+offset_right = 736.0
+offset_bottom = 451.0
+metadata/_edit_group_ = true
+
+[node name="BaseLedge3" parent="." instance=ExtResource("1_h1oql")]
+offset_left = 878.0
+offset_top = 451.0
+offset_right = 878.0
+offset_bottom = 451.0
+metadata/_edit_group_ = true

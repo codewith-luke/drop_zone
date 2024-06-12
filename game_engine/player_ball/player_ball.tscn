@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5rchwf4q8bgn"]
 
-[ext_resource type="Texture2D" uid="uid://c1wft7hu5ol46" path="res://textures/ball.png" id="1_p46vb"]
+[ext_resource type="Texture2D" uid="uid://c1wft7hu5ol46" path="res://textures/assets/ball.png" id="1_p46vb"]
 [ext_resource type="Script" path="res://player_ball/player_ball.gd" id="1_s32fq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gwers"]

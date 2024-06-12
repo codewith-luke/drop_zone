@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://j8hsub767gn6"]
+
+[ext_resource type="TileSet" uid="uid://2ddr8iops78b" path="res://game_area/game_area.tres" id="1_7dti7"]
+
+[node name="BaseLedge" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+pivot_offset = Vector2(72.5, 24)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_7dti7")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 393216, 0, 65536, 393216, 1, 131072, 393216, 2, 1, 458752, 0, 65537, 458752, 1, 131073, 458752, 2, 2, 524288, 0, 65538, 524288, 1, 131074, 524288, 2, 3, 393216, 0, 65539, 393216, 1, 131075, 393216, 2, 4, 458752, 0, 65540, 458752, 1, 131076, 458752, 2, 5, 524288, 0, 65541, 524288, 1, 131077, 524288, 2, 6, 393216, 0, 65542, 393216, 1, 131078, 393216, 2, 7, 458752, 0, 65543, 458752, 1, 131079, 458752, 2, 8, 524288, 0, 65544, 524288, 1, 131080, 524288, 2)

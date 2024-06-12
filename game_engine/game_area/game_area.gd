@@ -16,7 +16,6 @@ func _process(_delta):
 	pass
 
 func _on_add_player_pressed():	
-	print("clicked")
 	var mouse_position = get_viewport().get_mouse_position()
 	_on_player_add(mouse_position)
 	
